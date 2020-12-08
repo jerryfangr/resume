@@ -3,3 +3,7 @@
   display: block;
   clear: both;
 }
+
+.bd-red {
+  border: 1px solid #f00;
+}

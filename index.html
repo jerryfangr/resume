@@ -1,101 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./css/common.css">
-  <link rel="stylesheet" href="./css/index.css">
-</head>
-<body>
-  <div class="top-nav-bar">
-    <div class="top-nav-bar-inner clearfix">
-      <a class="logo" href="#" title="logo" style="float: left;">
-        <span class="rs">RS</span><span class="card">card</span>
-      </a>
-      <nav style="float: right;">
-        <ul class="clearfix">
-          <li><a href="#">关于</a></li>
-          <li><a href="#">技能</a></li>
-          <li><a href="#">作品</a></li>
-          <li><a href="#">博客</a></li>
-          <li><a href="#">日历</a></li>
-          <li><a href="#">联系</a></li>
-          <li><a href="#">其他</a></li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-  <div class="banner"></div>here</div>
-  <main>
-    <div class="picture">
-      <img src="#" alt="header image">
-    </div>
-    <div class="text">
-      <div class="card">
-        <div class="profile">
-          <span class="welcome">Hello</span>
-          <h1>方涵聪</h1>
-          <p>前端开发工程师</p>
-          <hr>
-          <!-- description -->
-          <dl>
-            <dt>年龄</dt>
-            <dd>22</dd>
-            <dt>所在城市</dt>
-            <dd>上海</dd>
-            <dt>邮箱</dt>
-            <dd>xdxtf@qq.com</dd>
-            <dt>手机</dt>
-            <dd>123456789</dd>
-          </dl>
-        </div>
-        <fotter class="media">
-          <a href="#"><img src="#" alt="..."></a>
-          <a href="#"><img src="#" alt="..."></a>
-          <a href="#"><img src="#" alt="..."></a>
-          <a href="#"><img src="#" alt="..."></a>
-          <a href="#"><img src="#" alt="..."></a>
-          <a href="#"><img src="#" alt="..."></a>
-          <a href="#"><img src="#" alt="..."></a>
-          <a href="#"><img src="#" alt="..."></a>
-          <a href="#"><img src="#" alt="..."></a>
-          <a href="#"><img src="#" alt="..."></a>
-        </fotter>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script src="//at.alicdn.com/t/font_2257477_s3vz490s97c.js"></script>
+    <style type="text/css">
+      .icon {
+        width: 1em; 
+        height: 1em;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-nav-bar">
+      <div class="top-nav-bar-inner clearfix">
+        <a class="logo" href="#" title="logo" style="float: left">
+          <span class="rs">RS</span><span class="card">card</span>
+        </a>
+        <nav style="float: right">
+          <ul class="clearfix">
+            <li><a href="#">关于</a></li>
+            <li><a href="#">技能</a></li>
+            <li><a href="#">作品</a></li>
+            <li><a href="#">博客</a></li>
+            <li><a href="#">日历</a></li>
+            <li><a href="#">联系</a></li>
+            <li><a href="#">其他</a></li>
+          </ul>
+        </nav>
       </div>
-
+    </div>
+    <div class="banner">
+      <div class="mask"></div>
+    </div>
+    <main>
+      <div class="user-card">
+        <div class="user-info clearfix">
+          <div class="picture">
+            <img src="./img/avatar.jpg" width="299" height="347" alt="头像" />
+          </div>
+          <div class="text">
+            <span class="welcome">HELLO</span>
+            <h1>方涵聪</h1>
+            <p>前端开发工程师</p>
+            <hr />
+            <!-- description -->
+            <dl>
+              <dt>年龄</dt>
+              <dd>22</dd>
+              <dt>所在城市</dt>
+              <dd>上海</dd>
+              <dt>邮箱</dt>
+              <dd>xdxtf@qq.com</dd>
+              <dt>手机</dt>
+              <dd>123456789</dd>
+            </dl>
+          </div>
+        </div>
+        <footer class="media">
+          <a href="#">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-weibo"></use>
+            </svg>
+          </a>
+          <a href="#">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-tuite"></use>
+            </svg>
+          </a>
+          <a href="#">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-github"></use>
+            </svg>
+          </a>
+          <a href="#">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-blog"></use>
+            </svg>
+          </a>
+        </footer>
+      </div>
       <a href="#" class="button">DOWNLOAD PDF RESUME</a>
       <p>
-        方涵聪，前端工程师<br>
+        方涵聪，前端工程师<br />
         技能: 前端开发，Node.js开发
       </p>
-    </div>
-  </main>
-  <section>
-    <h2>技能</h2>
-    <ol>
-      <li>HTML 5 &amp; CSS3</li>
-      <li>JavaScript</li>
-      <li>jQuery</li>
-      <li>Vue</li>
-      <li>React</li>
-      <li>nodejs</li>
-    </ol>
-  </section>
-  <section>
-    <h2>作品集</h2>
-    <nav>
+    </main>
+    <section>
+      <h2>技能</h2>
       <ol>
-        <li>所有</li>
-        <li>框架</li>
-        <li>原生</li>
+        <li>HTML 5 &amp; CSS3</li>
+        <li>JavaScript</li>
+        <li>jQuery</li>
+        <li>Vue</li>
+        <li>React</li>
+        <li>nodejs</li>
       </ol>
-    </nav>
-    <div class="jobs">
-      <div class="big"></div>
-      <div class="small"></div>
-      <div class="small"></div>
-    </div>
-  </section>
-</body>
+    </section>
+    <section>
+      <h2>作品集</h2>
+      <nav>
+        <ol>
+          <li>所有</li>
+          <li>框架</li>
+          <li>原生</li>
+        </ol>
+      </nav>
+      <div class="jobs">
+        <div class="big"></div>
+        <div class="small"></div>
+        <div class="small"></div>
+      </div>
+    </section>
+  </body>
 </html>
