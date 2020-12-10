@@ -1,4 +1,3 @@
-
 * {
   margin:0;padding:0;
 }
@@ -11,11 +10,17 @@ hr {
   border: none;
   border-top: 1px solid #DEDEDE;
 }
+ul,ol {
+  list-style: none;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-weight: normal;
+}
 body {
   margin: 0;
-  background-color: #efefef;
+  background-color: #EFEFEF;
 }
-/* .top-nav-bar */
+
 .top-nav-bar {
   position: fixed;
   top: 0;
@@ -61,11 +66,18 @@ body {
   font-weight: bold;
   padding: 5px 0 5px 0;
   border-top: 3px solid transparent;
-  border-bottom: 3px solid transparent;
-  transition: border .3s;
 }
-.top-nav-bar nav > ul > li > a:hover {
-  border-bottom: 3px solid #e06567;
+.top-nav-bar nav > ul > li > a::after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 0;
+  background-color: #07CB79;
+  transition: width .2s;
+}
+
+.top-nav-bar nav > ul > li > a:hover::after {
+  width: 100%;
 }
 
 .banner {
@@ -76,14 +88,18 @@ body {
 }
 .banner > .mask {
   height: 515px;
-  background-color: rgba(27, 27, 37, 0.8);
+  background-color: rgba(44, 51, 64, 0.8);
 }
 
+main {
+  margin-top: -340px;
+}
 main > .user-card {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
   background-color: #fff;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, .5);
 }
 .user-card .picture {
   float: left;
@@ -100,7 +116,8 @@ main > .user-card {
   display: inline-block;
   background-color: #07CB79;
   color: #fff;
-  padding: 4px 16px;
+  font-size: 14px;
+  padding: 4px 13px;
   line-height: 22px;
   margin-bottom: 10px;
   position: relative;
@@ -119,6 +136,7 @@ main > .user-card {
 .user-card .text > h1 {
   margin-top: 18px;
   margin-bottom: 5px;
+  font-weight: bold;
 }
 .user-card .text > hr {
   margin: 23px 0;
@@ -153,12 +171,87 @@ main > .user-card {
   transition: background-color .2s;
   background-color: #06B66D;
 }
-
 .user-card  svg {
   width: 30px;
   height: 30px;
   fill: #ffffff;
   vertical-align: top;
+}
+body > main .download-wrapper {
+  text-align: center;
+}
+body > main .download-resume {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 15px 20px;
+  border: 1px solid #cbcdcf;
+  border-radius: 2px;
+  color: #3d4451;
+  font-weight: bold;
+  margin: 32px auto;
+  transition: box-shadow .3s;
+}
+body > main .download-resume:hover {
+  opacity: .95;
+  text-decoration: none;
+  box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+}
+
+body > main .self-introduction {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: cursive;
+  font-size: 19px;
+}
+
+section.skills,
+section.portfolio {
+  margin-top: 70px;
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+section.skills h2,
+section.portfolio h2 {
+  text-align: center;
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+section.skills h3 {
+  font-size: 14px;
+  line-height: 1.1;
+}
+section.skills > ol {
+  margin-top: 30px;
+  background-color: #fff;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .5);
+  padding: 42px 50px 10px;
+}
+section.skills > ol > li {
+  width: 48%;
+}
+section.skills > ol > li:nth-child(odd) {
+  float: left;
+}
+section.skills > ol > li:nth-child(even) {
+  float: right;
+}
+
+section.skills .process-bar {
+  height: 5px;
+  background-color: #CDF5E4;
+  border-radius: 2.5px;
+  margin: 4px 0 40px;
+}
+section.skills .process-bar > .bar-value {
+  background-color: #07CB79;
+  width: 70%;
+  height: 100%;
+  border-radius: 2.5px;
 }
 
 
