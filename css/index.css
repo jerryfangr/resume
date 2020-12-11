@@ -253,5 +253,69 @@ section.skills .process-bar > .bar-value {
   height: 100%;
   border-radius: 2.5px;
 }
+section.portfolio {
+  text-align: center;
+  margin-bottom: 100px;
+}
+section.portfolio > nav {
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
 
+}
+section.portfolio > nav > ol {
+  display: inline-block;
+  vertical-align: top;
+  margin: 38px auto 0;
+}
+section.portfolio > nav > ol > li {
+  float: left;
+  margin-left: 45px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+}
+section.portfolio > nav > ol > li:first-child {
+  margin-left: 0;
+}
+section.portfolio > nav > .bar {
+  margin-top: 16px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: #fff;
+}
+section.portfolio > nav .bar-inner {
+  height: 100%;
+  border-radius: 3px;
+  background-color: #07CB79;
+  transition-property: width, margin;
+  transition-duration: 0.4s;
+}
+section.portfolio > nav .bar.state-1 .bar-inner {
+  margin-left: 0;
+  width: 35px;
+}
+section.portfolio > nav .bar.state-2 .bar-inner {
+  margin-left: 65px;
+  width: 35px;
+}
+section.portfolio > nav .bar.state-3 .bar-inner {
+  margin-left: 140px;
+  width: 95px;
+}
 
+section.portfolio .works {
+  position: relative;
+  margin-top: 30px;
+}
+section.portfolio .works > .big,
+section.portfolio .works > .small {
+  position: absolute;
+}
+
+/* .big {
+  float: left;
+}
+.small {
+  float: right;
+} */
