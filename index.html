@@ -19,7 +19,9 @@
     </style>
   </head>
   <body>
-    <div class="loading"></div>
+    <div id="siteWelcome" class="site-welcome active">
+      <div class="loading"></div>
+    </div>
     <div class="top-nav-bar">
       <div class="top-nav-bar-inner clearfix">
         <a class="logo" href="#" title="logo" style="float: left">
@@ -172,6 +174,11 @@
       portfolio3.onclick = function () {
         portfolioBar.className = "bar state-3";
       }
+    </script>
+    <script>
+      setTimeout(() => {
+        siteWelcome.classList.remove('active');
+      }, 1000);
     </script>
 
   </body>
