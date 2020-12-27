@@ -21,6 +21,28 @@ body {
   background-color: #EFEFEF;
 }
 
+.loading {
+  width: 100vw;
+  height: 100vh;
+  max-width:100%;
+  position: relative;
+  z-index: 999;
+  background-color: #fefefe;
+}
+.loading::before,.loading::after {
+  content: '';
+  border-radius: 50%;
+  background-color: #3d4451;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: enlarge 1.5s linear infinite;
+}
+.loading::after {
+  animation: enlarge 1.5s linear .75s infinite;
+}
+
 .top-nav-bar {
   position: fixed;
   top: 0;
