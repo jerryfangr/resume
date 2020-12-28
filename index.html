@@ -22,7 +22,7 @@
     <div id="siteWelcome" class="site-welcome active">
       <div class="loading"></div>
     </div>
-    <div class="top-nav-bar">
+    <div id="topNavBar" class="top-nav-bar">
       <div class="top-nav-bar-inner clearfix">
         <a class="logo" href="#" title="logo" style="float: left">
           <span class="rs">RS</span><span class="card">card</span>
@@ -31,7 +31,14 @@
           <ul class="clearfix">
             <li><a href="#">关于</a></li>
             <li><a href="#">技能</a></li>
-            <li><a href="#">作品</a></li>
+            <li class="menu-trigger">
+              <a href="#">作品</a>
+              <ul class="sub-menu">
+                <li>作品1</li>
+                <li>作品2</li>
+                <li>作品3</li>
+              </ul>
+            </li>
             <li><a href="#">博客</a></li>
             <li><a href="#">日历</a></li>
             <li><a href="#">联系</a></li>
@@ -174,11 +181,29 @@
       portfolio3.onclick = function () {
         portfolioBar.className = "bar state-3";
       }
-    </script>
-    <script>
+
       setTimeout(() => {
         siteWelcome.classList.remove('active');
-      }, 1000);
+      }, 100);
+    </script>
+
+    <script>
+      window.onscroll = function (e) {
+        if (window.scrollY > 0) {
+          topNavBar.classList.add('sticky');
+        } else {
+          topNavBar.classList.remove('sticky');
+        }
+      }
+      //document.getElementsByClassName('menuTrigger')
+      document.querySelectorAll('nav > ul > li').forEach(m => {
+        m.onmouseenter = function () {
+          m.classList.add('active');
+        }
+        m.onmouseleave = function () {
+          m.classList.remove('active');
+        }
+      })
     </script>
 
   </body>
