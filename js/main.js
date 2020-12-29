@@ -1,20 +1,36 @@
-// nav bar sticky effect event, mark active menu
+// nav bar scroll event
 let allJumpSelector = document.querySelectorAll('nav > ul > li > a');
 let allSections = document.querySelectorAll('[data-scroll]');
-window.onscroll = function (e) {
+function inScreen(element) {
+  let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  let windowHeight = window.innerHeight;
+  if (element.offsetTop < (scrollTop + windowHeight - 20)) {
+    return true;
+  }
+  return false;
+
+}
+function updateLoadElement () {
   let scrollY = window.scrollY;
+  // topNavBar sticky effect switch
   if (scrollY > 0) {
     topNavBar.classList.add('sticky');
   } else {
     topNavBar.classList.remove('sticky');
   }
 
+  // active menu auto switch
   let recentMenu = allSections[0];
   for (let index = 1; index < allSections.length; index++) {
     let distance1 = Math.abs(recentMenu.offsetTop - scrollY);
     let distance2 = Math.abs(allSections[index].offsetTop - scrollY);
     if (distance1 > distance2) {
       recentMenu = allSections[index];
+    }
+
+    // check is section in screen
+    if (inScreen(allSections[index])) {
+      allSections[index].classList.add('appear');
     }
   }
 
@@ -25,6 +41,18 @@ window.onscroll = function (e) {
     })
     activeMenu.classList.add('active');
   }
+}
+
+window.onload = function () {
+  for (let index = 0; index < allSections.length; index++) {
+    if (inScreen(allSections[index])) {
+      allSections[index].classList.add('appear');
+    }
+  }
+}
+
+window.onscroll = function (e) {
+  updateLoadElement()
 }
 
 // nav bar click event

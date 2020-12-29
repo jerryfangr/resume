@@ -154,6 +154,9 @@ body {
 main {
   margin-top: -340px;
 }
+main.appear {
+  animation: slideInUp .6s ease-in-out;
+}
 main > .user-card {
   max-width: 940px;
   margin-left: auto;
@@ -267,12 +270,25 @@ body > main .self-introduction {
   font-size: 19px;
 }
 
-section.skills,
-section.portfolio {
+
+section {
   margin-top: 70px;
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
+}
+section.appear {
+  animation: slideInUp .6s ease-in-out;
+}
+@keyframes slideInUp {
+  from {
+    transform: translateY(80px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: .9;
+  }
 }
 section.skills h2,
 section.portfolio h2 {
