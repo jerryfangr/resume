@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Resume | Jerryfangr</title>
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/loading.css" />
@@ -29,10 +29,10 @@
         </a>
         <nav style="float: right">
           <ul class="clearfix">
-            <li><a href="#">关于</a></li>
-            <li><a href="#">技能</a></li>
+            <li><a href="#siteAbout">关于</a></li>
+            <li><a href="#siteSkills">技能</a></li>
             <li class="menu-trigger">
-              <a href="#">作品</a>
+              <a href="#siteWorks">作品</a>
               <ul class="sub-menu">
                 <li>作品1</li>
                 <li>作品2</li>
@@ -51,7 +51,7 @@
       <div class="mask"></div>
     </div>
     <main>
-      <div class="user-card">
+      <div id="siteAbout" class="user-card">
         <div class="user-info clearfix">
           <div class="picture">
             <img src="./img/avatar.jpg" width="299" height="347" alt="头像" />
@@ -105,7 +105,7 @@
         技能: 前端开发，Node.js开发
       </p>
     </main>
-    <section class="skills">
+    <section id="siteSkills" class="skills">
       <h2>技能</h2>
       <ol class="clearfix">
         <li>
@@ -146,7 +146,7 @@
         </li>
       </ol>
     </section>
-    <section class="portfolio">
+    <section id="siteWorks" class="portfolio">
       <h2>作品集</h2>
       <nav>
         <ol class="clearfix">
@@ -195,7 +195,8 @@
           topNavBar.classList.remove('sticky');
         }
       }
-      //document.getElementsByClassName('menuTrigger')
+
+      // nav bar hover event
       document.querySelectorAll('nav > ul > li').forEach(m => {
         m.onmouseenter = function () {
           m.classList.add('active');
@@ -204,6 +205,20 @@
           m.classList.remove('active');
         }
       })
+
+      // nav bar click event
+      document.querySelectorAll('nav > ul > li > a').forEach(a => {
+        a.onclick = function (e) {
+          let id = a.getAttribute('href');
+          if (!!id && id.length > 1 && id[0] === '#') {
+            e.preventDefault();
+            let scrollYDistance = document.querySelector(id).offsetTop - 70;
+            window.scrollTo(0, scrollYDistance)
+          }
+        }
+      })
+
+      
     </script>
 
   </body>

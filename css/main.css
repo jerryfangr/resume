@@ -109,7 +109,7 @@ body {
   font-size: 13px;
   right: 0;
   background-color: #fff;
-  color: #3d4451;
+  color: #8998b1;
   animation: slideInLeft .3s;
 }
 .top-nav-bar nav > ul > li.menu-trigger.active > .sub-menu {
@@ -118,6 +118,14 @@ body {
 .top-nav-bar nav > ul > li.menu-trigger > .sub-menu > li {
   white-space: nowrap;
   padding: 5px 10px;
+}
+.top-nav-bar nav > ul > li.menu-trigger.active > .sub-menu  > li {
+  cursor: pointer;
+  font-weight: bold;
+  transition: all .5s;
+}
+.top-nav-bar nav > ul > li.menu-trigger.active > .sub-menu  > li:hover {
+  color: #182131;
 }
 @keyframes slideInLeft {
   from {
