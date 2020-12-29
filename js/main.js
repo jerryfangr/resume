@@ -1,6 +1,7 @@
 // nav bar scroll event
 let allJumpSelector = document.querySelectorAll('nav > ul > li > a');
 let allSections = document.querySelectorAll('[data-scroll]');
+
 function inScreen(element) {
   let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
   let windowHeight = window.innerHeight;
@@ -10,7 +11,16 @@ function inScreen(element) {
   return false;
 
 }
-function updateLoadElement () {
+
+window.onload = function () {
+  for (let index = 0; index < allSections.length; index++) {
+    if (inScreen(allSections[index])) {
+      allSections[index].classList.add('appear');
+    }
+  }
+}
+
+window.onscroll = function (e) {
   let scrollY = window.scrollY;
   // topNavBar sticky effect switch
   if (scrollY > 0) {
@@ -41,18 +51,6 @@ function updateLoadElement () {
     })
     activeMenu.classList.add('active');
   }
-}
-
-window.onload = function () {
-  for (let index = 0; index < allSections.length; index++) {
-    if (inScreen(allSections[index])) {
-      allSections[index].classList.add('appear');
-    }
-  }
-}
-
-window.onscroll = function (e) {
-  updateLoadElement()
 }
 
 // nav bar click event
