@@ -97,9 +97,11 @@ body {
   width: 0;
   background-color: #07CB79;
   transition: all .3s;
+  margin-top: 3px;
   opacity: .2;
 }
-.top-nav-bar nav > ul > li.active > a::after {
+.top-nav-bar nav > ul > li > a.active::after,
+.top-nav-bar nav > ul > li > a:hover::after {
   width: 100%;
   opacity: 1;
 }
@@ -111,20 +113,21 @@ body {
   background-color: #fff;
   color: #8998b1;
   animation: slideInLeft .3s;
+  box-shadow: 0 0 2px #999;
 }
-.top-nav-bar nav > ul > li.menu-trigger.active > .sub-menu {
+.top-nav-bar nav > ul > li.menu-trigger:hover > .sub-menu {
   display: block;
 }
 .top-nav-bar nav > ul > li.menu-trigger > .sub-menu > li {
   white-space: nowrap;
-  padding: 5px 10px;
+  padding: 5px 15px;
 }
-.top-nav-bar nav > ul > li.menu-trigger.active > .sub-menu  > li {
+.top-nav-bar nav > ul > li.menu-trigger:hover > .sub-menu  > li {
   cursor: pointer;
   font-weight: bold;
   transition: all .5s;
 }
-.top-nav-bar nav > ul > li.menu-trigger.active > .sub-menu  > li:hover {
+.top-nav-bar nav > ul > li.menu-trigger:hover > .sub-menu  > li:hover {
   color: #182131;
 }
 @keyframes slideInLeft {
@@ -297,7 +300,6 @@ section.skills > ol > li:nth-child(odd) {
 section.skills > ol > li:nth-child(even) {
   float: right;
 }
-
 section.skills .process-bar {
   height: 5px;
   background-color: #CDF5E4;
@@ -310,6 +312,7 @@ section.skills .process-bar > .bar-value {
   height: 100%;
   border-radius: 2.5px;
 }
+
 section.portfolio {
   text-align: center;
   margin-bottom: 100px;

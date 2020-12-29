@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/loading.css" />
     <script src="//at.alicdn.com/t/font_2257477_s3vz490s97c.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.js" integrity="sha512-lIKG1kC5TMb1Zx32vdz1n31YJMZRknVY20U9MJ28hD3y2c0OKN0Ce5NhJji78v8zX5UOSsm+MTBOcJt7yMBnSg==" crossorigin="anonymous"></script>
     <style type="text/css">
       .icon {
         width: 1em; 
@@ -39,8 +40,8 @@
                 <li>作品3</li>
               </ul>
             </li>
+            <li><a href="#">教育</a></li>
             <li><a href="#">博客</a></li>
-            <li><a href="#">日历</a></li>
             <li><a href="#">联系</a></li>
             <li><a href="#">其他</a></li>
           </ul>
@@ -51,7 +52,7 @@
       <div class="mask"></div>
     </div>
     <main>
-      <div id="siteAbout" class="user-card">
+      <div id="siteAbout" class="user-card" data-scroll>
         <div class="user-info clearfix">
           <div class="picture">
             <img src="./img/avatar.jpg" width="299" height="347" alt="头像" />
@@ -105,7 +106,7 @@
         技能: 前端开发，Node.js开发
       </p>
     </main>
-    <section id="siteSkills" class="skills">
+    <section id="siteSkills" class="skills" data-scroll>
       <h2>技能</h2>
       <ol class="clearfix">
         <li>
@@ -146,7 +147,7 @@
         </li>
       </ol>
     </section>
-    <section id="siteWorks" class="portfolio">
+    <section id="siteWorks" class="portfolio" data-scroll>
       <h2>作品集</h2>
       <nav>
         <ol class="clearfix">
@@ -186,40 +187,6 @@
         siteWelcome.classList.remove('active');
       }, 100);
     </script>
-
-    <script>
-      window.onscroll = function (e) {
-        if (window.scrollY > 0) {
-          topNavBar.classList.add('sticky');
-        } else {
-          topNavBar.classList.remove('sticky');
-        }
-      }
-
-      // nav bar hover event
-      document.querySelectorAll('nav > ul > li').forEach(m => {
-        m.onmouseenter = function () {
-          m.classList.add('active');
-        }
-        m.onmouseleave = function () {
-          m.classList.remove('active');
-        }
-      })
-
-      // nav bar click event
-      document.querySelectorAll('nav > ul > li > a').forEach(a => {
-        a.onclick = function (e) {
-          let id = a.getAttribute('href');
-          if (!!id && id.length > 1 && id[0] === '#') {
-            e.preventDefault();
-            let scrollYDistance = document.querySelector(id).offsetTop - 70;
-            window.scrollTo(0, scrollYDistance)
-          }
-        }
-      })
-
-      
-    </script>
-
+    <script src="./js/main.js"></script>
   </body>
 </html>
