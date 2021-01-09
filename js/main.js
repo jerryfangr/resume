@@ -22,7 +22,7 @@ window.onload = function () {
 
 window.onscroll = function (e) {
   let scrollY = window.scrollY;
-  // topNavBar sticky effect switch
+  // switch topNavBar sticky effect
   if (scrollY > 0) {
     topNavBar.classList.add('sticky');
   } else {

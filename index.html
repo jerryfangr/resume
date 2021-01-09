@@ -2,16 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
     <title>Resume | Jerryfangr</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.css" integrity="sha512-m3pAvNriL711NMlhkZHK6K4Tu2/RjtrzyjxZU8mlAbxxoDoURy27KajN1LGTLeEEPvaN12mKAgSCrYEwF9y0jA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/loading.css" />
     <script src="//at.alicdn.com/t/font_2257477_s3vz490s97c.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.js" integrity="sha512-lIKG1kC5TMb1Zx32vdz1n31YJMZRknVY20U9MJ28hD3y2c0OKN0Ce5NhJji78v8zX5UOSsm+MTBOcJt7yMBnSg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.min.js" integrity="sha512-fJ91rDja9nv9NCUNbvoW69MB1sQlp1d0eJt1NZDJQ1CuwcxReaXUrMCKI23yI9IMnB2hd2fq4PHZZ9UKN/i0mA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.js" integrity="sha512-1LlEYE0qExJ/GUfAJ0k2K2fB5sIvMv/q6ueo3syohvQ3ElWDQVSMUOf39cxaDWHtNu7M6lF6ZC1H6A1m3SvheA==" crossorigin="anonymous" ></script>
     <style type="text/css">
       .icon {
-        width: 1em; 
+        width: 1em;
         height: 1em;
         vertical-align: -0.15em;
         fill: currentColor;
@@ -41,7 +43,7 @@
               </ul>
             </li>
             <li><a href="#">教育</a></li>
-            <li><a href="#">博客</a></li>
+            <li><a href="https://jerryfangr.github.io/">博客</a></li>
             <li><a href="#">联系</a></li>
             <li><a href="#">其他</a></li>
           </ul>
@@ -78,28 +80,30 @@
         <footer class="media">
           <a href="#">
             <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-weibo"></use>
+              <use xlink:href="#icon-weibo"></use>
             </svg>
           </a>
           <a href="#">
             <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-tuite"></use>
+              <use xlink:href="#icon-tuite"></use>
             </svg>
           </a>
           <a href="#">
             <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-github"></use>
+              <use xlink:href="#icon-github"></use>
             </svg>
           </a>
           <a href="#">
             <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-blog"></use>
+              <use xlink:href="#icon-blog"></use>
             </svg>
           </a>
         </footer>
       </div>
       <p class="download-wrapper">
-        <a href="./file/resume.pdf" class="download-resume" download>下载 PDF 简历</a>
+        <a href="./file/resume.pdf" class="download-resume" download
+          >下载 PDF 简历</a
+        >
       </p>
       <p class="self-introduction">
         方涵聪，前端工程师<br />
@@ -112,37 +116,37 @@
         <li>
           <h3>HTML 5 &amp; CSS3</h3>
           <div class="process-bar">
-            <div class="bar-value" style="width: 70%;"></div>
+            <div class="bar-value" style="width: 70%"></div>
           </div>
         </li>
         <li>
           <h3>JavaScript</h3>
           <div class="process-bar">
-            <div class="bar-value" style="width: 80%;"></div>
+            <div class="bar-value" style="width: 80%"></div>
           </div>
         </li>
         <li>
           <h3>JQuery</h3>
           <div class="process-bar">
-            <div class="bar-value" style="width: 60%;"></div>
+            <div class="bar-value" style="width: 60%"></div>
           </div>
         </li>
         <li>
           <h3>Vue.js</h3>
           <div class="process-bar">
-            <div class="bar-value" style="width: 70%;"></div>
+            <div class="bar-value" style="width: 70%"></div>
           </div>
         </li>
         <li>
           <h3>React.js</h3>
           <div class="process-bar">
-            <div class="bar-value" style="width: 30%;"></div>
+            <div class="bar-value" style="width: 30%"></div>
           </div>
         </li>
         <li>
           <h3>Node.js</h3>
           <div class="process-bar">
-            <div class="bar-value" style="width: 75%;"></div>
+            <div class="bar-value" style="width: 75%"></div>
           </div>
         </li>
       </ol>
@@ -159,33 +163,54 @@
           <div class="bar-inner"></div>
         </div>
       </nav>
-      <div class="works" style="height: 600px;">
-        <div class="big" style="top: 0; left: 0;">
-          <img src="./img/portfolio-1.jpg" alt="作品1截图">
+      <style>
+      </style>
+      <div class="swiper-container works">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="./img/portfolio-1.jpg"/></div>
+          <div class="swiper-slide"><img src="./img/portfolio-2.jpg"/></div>
+          <div class="swiper-slide"><img src="./img/portfolio-3.jpg"/></div>
+          <div class="swiper-slide"><img src="./img/portfolio-4.jpg"/></div>
         </div>
-        <div class="small" style="top: 0; right: 0;">
-          <img src="./img/portfolio-2.jpg" alt="作品2截图">
-        </div>
-        <div class="small" style="bottom: 0; right: 0;">
-          <img src="./img/portfolio-3.jpg" alt="作品3截图">
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination">
+          <span class="swiper-pagination-bullet"><img src="./img/portfolio-1.jpg"></span>
+          <span class="swiper-pagination-bullet"><img src="./img/portfolio-2.jpg"></span>
+          <span class="swiper-pagination-bullet"><img src="./img/portfolio-3.jpg"></span>
+          <span class="swiper-pagination-bullet"><img src="./img/portfolio-4.jpg"></span>
+          <span class="swiper-pagination-bullet swiper-pagination-bullet-active"><img src="./img/portfolio-1.jpg"></span>
         </div>
       </div>
+      <script>
+        var mySwiper = new Swiper(".swiper-container", {
+          direction: "horizontal", // 垂直切换选项
+          loop: true, // 循环模式选项
+
+          // 如果需要分页器
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            dynamicMainBullets: 1,
+            renderBullet: function (index, className) {
+              return '<span class="' + className + '"><image src="./img/portfolio-' + ( index  + 1 ) + '.jpg"></span>';
+            },
+          },
+        });
+      </script>
     </section>
-    
+
     <script>
       portfolio1.onclick = function () {
         portfolioBar.className = "bar state-1";
-      }
+      };
       portfolio2.onclick = function () {
         portfolioBar.className = "bar state-2";
-      }
+      };
       portfolio3.onclick = function () {
         portfolioBar.className = "bar state-3";
-      }
+      };
 
-      setTimeout(() => {
-        siteWelcome.classList.remove('active');
-      }, 100);
+      siteWelcome.classList.remove("active");
     </script>
     <script src="./js/main.js"></script>
   </body>
