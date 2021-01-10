@@ -43,7 +43,7 @@
     <div class="banner">
       <div class="mask"></div>
     </div>
-    <main id="siteAbout" data-scroll>
+    <main id="siteAbout" data-scroll-anchor>
       <div class="user-card">
         <div class="user-info clearfix">
           <div class="picture">
@@ -100,7 +100,7 @@
         技能: 前端开发，Node.js开发
       </p>
     </main>
-    <section id="siteSkills" class="skills" data-scroll>
+    <section id="siteSkills" class="skills" data-scroll-anchor>
       <h2>技能</h2>
       <ol class="clearfix">
         <li>
@@ -141,7 +141,7 @@
         </li>
       </ol>
     </section>
-    <section id="siteWorks" class="portfolio" data-scroll>
+    <section id="siteWorks" class="portfolio" data-scroll-anchor>
       <h2>作品集</h2>
       <nav>
         <ol class="clearfix">
@@ -153,8 +153,6 @@
           <div class="bar-inner"></div>
         </div>
       </nav>
-      <style>
-      </style>
       <div class="swiper-container works">
         <div class="swiper-wrapper">
           <div class="swiper-slide"><img src="./img/portfolio-1.jpg"/></div>
@@ -162,7 +160,6 @@
           <div class="swiper-slide"><img src="./img/portfolio-3.jpg"/></div>
           <div class="swiper-slide"><img src="./img/portfolio-4.jpg"/></div>
         </div>
-        <!-- 如果需要分页器 -->
         <div class="swiper-pagination">
           <span class="swiper-pagination-bullet"><img src="./img/portfolio-1.jpg"></span>
           <span class="swiper-pagination-bullet"><img src="./img/portfolio-2.jpg"></span>
@@ -171,37 +168,10 @@
           <span class="swiper-pagination-bullet swiper-pagination-bullet-active"><img src="./img/portfolio-1.jpg"></span>
         </div>
       </div>
-      <script>
-        var mySwiper = new Swiper(".swiper-container", {
-          direction: "horizontal", // 垂直切换选项
-          loop: true, // 循环模式选项
-
-          // 如果需要分页器
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-            dynamicMainBullets: 1,
-            renderBullet: function (index, className) {
-              return '<span class="' + className + '"><image src="./img/portfolio-' + ( index  + 1 ) + '.jpg"></span>';
-            },
-          },
-        });
-      </script>
     </section>
-
-    <script>
-      portfolio1.onclick = function () {
-        portfolioBar.className = "bar state-1";
-      };
-      portfolio2.onclick = function () {
-        portfolioBar.className = "bar state-2";
-      };
-      portfolio3.onclick = function () {
-        portfolioBar.className = "bar state-3";
-      };
-
-      siteWelcome.classList.remove("active");
-    </script>
-    <script src="./js/main.js"></script>
+    <script src="./js/sticky-toolbar.js"></script>
+    <script src="./js/section-appear.js"></script>
+    <script src="./js/scroll-jump.js"></script>
+    <script src="./js/portfolio-switch.js"></script>
   </body>
 </html>
