@@ -41,6 +41,10 @@
       this.swiper = new Swiper(view.querySelector('.swiper-container'), this.swiperOptions);
     },
   }
-  controller.init(view); 
+  try {
+    controller.init(view); 
+  } catch (error) {
+    window.reloadScriptObj.add('./js/portfolio-switch.js');
+  }
 }.call();
 

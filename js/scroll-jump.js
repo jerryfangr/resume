@@ -5,17 +5,15 @@
     view: null,
     init: function (view) {
       this.view = view;
-      this.initTWEENFrames();
+      TWEEN && this.initTWEENFrames();
       this.bindEvents();
     },
     initTWEENFrames () {
-      // nav bar click event
-      function animate(time) {
+      function animate(time) { // 函数是异步的无法直接catch
         // time 是执行函数时的当前时间
         requestAnimationFrame(animate)
         TWEEN.update(time)
       }
-      // 希望执行一个动画，并且要求浏览器在下次重绘之前调用指定的回调函数更新动画。
       requestAnimationFrame(animate)
     },
     bindEvents () {
@@ -47,8 +45,13 @@
           callback && callback();
         })
         .start();
-    }  }
-  controller.init(view);
+    }
+  }
+  try {
+    controller.init(view);
+  } catch (error) {
+    window.reloadScriptObj.add('./js/scroll-jump.js');
+  }
 }.call();
 
 

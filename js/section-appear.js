@@ -12,12 +12,11 @@
     },
     bindEvents () {
       /*** 页面载入事件，标记出现在屏幕内的部分，添加出现动画(一次性) ***/
-      window.onload = () => {
-        siteWelcome.classList.remove("active");
+      window.addEventListener('load', () => {
         for (let index = 0; index < this.jumpAnchors.length; index++) {
           this.updateApearState(this.jumpAnchors[index]);
         }
-      }
+      })
 
       /*** 页面滚动事件，随着滚动自动切换当前显示的模块名 ***/
       window.addEventListener('scroll', () => {
@@ -57,7 +56,11 @@
       }
     }
   }
-  controller.init(view)
+  try {
+    controller.init(view);
+  } catch (error) {
+    window.reloadScriptObj.add('./js/section-appear.js');
+  }
 }.call()
 
 

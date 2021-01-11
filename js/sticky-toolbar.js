@@ -27,5 +27,9 @@
       view.classList[methodName]('sticky');
     }
   }
-  controller.init(view);
+  try {
+    controller.init(view);
+  } catch (error) {
+    window.reloadScriptObj.add('./js/sticky-toolbar.js');
+  }
 }.call();
