@@ -12,27 +12,9 @@
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/loading.css" />
     <script src="./js/myload.js"></script>
-    <script 
-      src="//at.alicdn.com/t/font_2257477_s3vz490s97c.js" 
-      onerror="reloadScript(this, './lib/ali-svg.icon.min.js')"
-    ></script>
-    <script 
-      src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.min.js" 
-      onerror="reloadScript(this, './lib/tween.18.6.4.umd.min.js')"
-      integrity="sha512-fJ91rDja9nv9NCUNbvoW69MB1sQlp1d0eJt1NZDJQ1CuwcxReaXUrMCKI23yI9IMnB2hd2fq4PHZZ9UKN/i0mA==" crossorigin="anonymous"></script>
-    <script 
-      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.js" 
-      onerror="reloadScript(this, './lib/swiper.6.4.5.bundle.min.js')"
-      integrity="sha512-1LlEYE0qExJ/GUfAJ0k2K2fB5sIvMv/q6ueo3syohvQ3ElWDQVSMUOf39cxaDWHtNu7M6lF6ZC1H6A1m3SvheA==" crossorigin="anonymous" ></script>
-    <script 
-      src="//cdn.jsdelivr.net/npm/leancloud-storage@4.9.0/dist/av-min.js"
-      onerror="reloadScript(this, './lib/leancloud-storage.4.9.0.min.js')"
-    ></script>
   </head>
   <body>
-    <div id="siteWelcome" class="site-welcome active">
-      <div class="loading"></div>
-    </div>
+    <div id="siteWelcome" class="site-welcome active"><div class="loading"></div></div>
     <div id="topNavBar" class="top-nav-bar">
       <div class="top-nav-bar-inner clearfix">
         <a class="logo" href="#" title="logo" style="float: left">
@@ -57,9 +39,7 @@
         </nav>
       </div>
     </div>
-    <div class="banner">
-      <div class="mask"></div>
-    </div>
+    <div class="banner"><div class="mask"></div></div>
     <main id="siteAbout" data-scroll-anchor>
       <div class="user-card">
         <div class="user-info clearfix">
@@ -186,6 +166,29 @@
         </div>
       </div>
     </section>
+    <section>
+      <h2>留言板</h2>
+      <form id="messageForm" action="" method="post">
+        <input type="text" name="message">
+        <button type="submit">提交</button>
+      </form>
+    </section>
+    <script 
+      src="//at.alicdn.com/t/font_2257477_s3vz490s97c.js" 
+      onerror="reloadScript(this, './lib/ali-svg.icon.min.js')"
+    ></script>
+    <script 
+      src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.min.js" 
+      onerror="reloadScript(this, './lib/tween.18.6.4.umd.min.js')"
+      integrity="sha512-fJ91rDja9nv9NCUNbvoW69MB1sQlp1d0eJt1NZDJQ1CuwcxReaXUrMCKI23yI9IMnB2hd2fq4PHZZ9UKN/i0mA==" crossorigin="anonymous"></script>
+    <script 
+      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.js" 
+      onerror="reloadScript(this, './lib/swiper.6.4.5.bundle.min.js')"
+      integrity="sha512-1LlEYE0qExJ/GUfAJ0k2K2fB5sIvMv/q6ueo3syohvQ3ElWDQVSMUOf39cxaDWHtNu7M6lF6ZC1H6A1m3SvheA==" crossorigin="anonymous" ></script>
+    <script 
+      src="//cdn.jsdelivr.net/npm/leancloud-storage@4.9.0/dist/av-min.js"
+      onerror="reloadScript(this, './lib/leancloud-storage.4.9.0.min.js')"
+    ></script>
     <script src="./js/sticky-toolbar.js"></script>
     <script src="./js/section-appear.js"></script>
     <script src="./js/scroll-jump.js"></script>

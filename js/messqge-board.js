@@ -7,12 +7,18 @@
   
   localStorage.setItem('debug', 'leancloud*');
   const DataObject = AV.Object.extend('Message');
-  const dataObject = new DataObject();
+  let form = document.querySelector('#messageForm');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let message = e.currentTarget.querySelector('input[name="message"]').value;
+    const dataObject = new DataObject();
+    dataObject.set('message', message);
+    dataObject.save().then((dataObject) => {
+      console.log('保存成功。')
+    })
+    // dataObject.save({'message':message}).then((dataObject) => {console.log('保存成功。')})
+  })
 
-  dataObject.set('words', 'Hello world!');
-  // dataObject.save().then((dataObject) => {
-  //   console.log('保存成功。')
-  // })
-
+  console.log(new AV.Query('Message'));
 }.call();
 
