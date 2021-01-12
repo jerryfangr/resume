@@ -1,30 +1,27 @@
-/*** 页面滚动事件，标题导航栏粘黏效果 ***/
+
 !function () {
+  // 页面滚动事件，标题导航栏粘黏效果
   let view = document.querySelector('#topNavBar');
   let controller = {
     view: null,
     state: null,
     init: function (view) {
       this.view = view;
+      this.updateState(window.scrollY);
       this.bindEvents();
     },
     bindEvents () {
       window.addEventListener('scroll', () => {
-        let scrollY = window.scrollY;
-        if (scrollY > 0) {
-          this.setState('active');
-        } else {
-          this.setState('deactive');
-        }
+        this.updateState(window.scrollY);
       })
     },
-    setState (state) {
-      if (state === this.state) {
-        return;
-      }
-      this.state = state;
-      let methodName = this.state === 'active' ? 'add' : 'remove';
-      view.classList[methodName]('sticky');
+    updateState(scrollY) {
+      let newState = scrollY > 0 ? 'active' : 'deactive';
+      if (newState === this.state) { return; }
+
+      this.state = newState;
+      let methodName = scrollY > 0 ? 'add' : 'remove';
+      this.view.classList[methodName]('sticky');
     }
   }
   try {

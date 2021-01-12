@@ -289,12 +289,6 @@ section {
   margin-left: auto;
   margin-right: auto;
 }
-section h2 {
-  text-align: center;
-  font-size: 34px;
-  line-height: 1.2;
-  font-weight: 600;
-}
 section.appear {
   animation: slideInUp 0.6s ease-in-out;
 }
@@ -307,6 +301,12 @@ section.appear {
     transform: translateY(0px);
     opacity: 0.9;
   }
+}
+section h2 {
+  text-align: center;
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 600;
 }
 
 section.skills h3 {
@@ -455,4 +455,52 @@ section.portfolio > .swiper-container .swiper-slide-active img {
 }
 section.portfolio > .swiper-container .swiper-slide-active:hover img {
   transform: scale(1.2);
+}
+
+section.message-board > ol {
+  font-size: 14px;
+}
+section.message-board > ol > li {
+  background: #fff;
+  box-shadow: 0 0 5px #cbd1dd;
+  padding: 19px 36px 23px 36px;
+  margin-top: 40px;
+  border-radius: 13px;
+}
+section.message-board > ol > li:nth-child(n+2) {
+  margin-top: 25px;
+}
+section.message-board > ol > li > .toolbar {
+  font-weight: bold;
+}
+section.message-board > ol > li > .toolbar > .reply-status {
+  float: left;
+}
+section.message-board > ol > li > .toolbar > .read-icon {
+  float: right;
+  font-size: 18px;
+  position: relative;
+  z-index: 1;
+
+}
+section.message-board > ol > li > .toolbar > .read-icon:hover {
+  cursor: pointer;
+}
+section.message-board > ol > li > .toolbar > .read-icon > svg {
+  fill:#afb2b9;
+  position: relative;
+  z-index: -1;
+}
+section.message-board > ol > li > .toolbar > .read-icon.read > svg {
+  fill:#080808;
+}
+section.message-board > ol > li > h3 {
+  padding: 20px 0 20px 0;
+}
+section.message-board > ol > li > .footer-info {
+  display: flex;
+  justify-content: space-between;
+}
+section.message-board > form {
+  margin: 30px 0;
 }

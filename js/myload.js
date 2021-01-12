@@ -1,4 +1,5 @@
 !function () {
+  // 页面的第三方文件载入失败处理，替换为本地文件
   function reloadTag(insertPosition, elem, type, link) {
     elem && elem.remove();
     let sandbyTag = document.createElement(type);

@@ -1,5 +1,5 @@
-  /*** 导航点击事件，点击后，随着规定的easing曲线速度滚动到对应模块位置 ***/
 !function () {
+  // 导航点击事件，点击后，随着规定的easing曲线速度滚动到对应模块位置
   let view = document.querySelectorAll('nav > ul > li > a');
   let controller = {
     view: null,

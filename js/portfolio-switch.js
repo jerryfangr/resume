@@ -1,5 +1,5 @@
-/**** 作品集，的轮播 ***/
 !function () {
+  // 作品集的轮播
   let view = document.querySelector('#siteWorks');
   let controller = {
     view: null,
