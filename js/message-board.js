@@ -1,54 +1,27 @@
 !function () {
   // 留言板
-  let view = document.querySelector('#siteMessage');
+  let view = View('section#siteMessage')
 
-  let model = {
+  let model = Model({
+    dataName: 'Message',
     init () {
-      AV.init({
-        appId: "8jw7gkIFnu4f0pNyGnYBrp6H-gzGzoHsz",
-        appKey: "xazaedy0vMM8yaHYwEIawsBI",
-        serverURL: "https://8jw7gkif.lc-cn-n1-shared.com"
-      });
-      this.DataObj = AV.Object.extend('Message');
       if (localStorage.user === 'me123456-skachaskjckobhfciawuobcui') {
         AV.User.logIn('user', 'test001').then((user) => {
-          console.log('login success', user);
+          console.log('login success', user)
         }, (error) => {
           console.log('er', error)
-        });
+        })
       }
-    },
-    fetch () { // 获取数据
-      let query = new AV.Query('Message')
-      return query.find();
-    },
-    add (addData) { // 增加数据
-      const dataObj = new this.DataObj();
-      for (const key in addData) {
-        dataObj.set(key, addData[key]);
-      }
-      return dataObj.save();
-    },
-    update (id, updateData) { // 更新数据
-      const dataObj = AV.Object.createWithoutData('Message', id);
-      for (const key in updateData) {
-        dataObj.set(key, updateData[key]);
-      }
-      return dataObj.save()    
     }
-  }
+  })
 
-  let controller = {
+  let controller = Controller({
     view: null,
     boardView: null,
     model: null,
     init: function (view) {
-      this.view = view;
-      this.boardView = view.querySelector('#messageList');
-      this.model = model;
-      this.model.init()
-      this.loadMessages();
-      this.bindEvents();
+      this.boardView = view.querySelector('#messageList')
+      this.loadMessages()
     },
     loadMessages() {
       this.model.fetch().then(result => {
@@ -70,9 +43,9 @@
         sender = 'unknow',
         read = false,
         id = '',
-      } = reply;
-      let readStatus = read ? '已读' : '未读';
-      let readClass = read ? 'read' : '';
+      } = reply
+      let readStatus = read ? '已读' : '未读'
+      let readClass = read ? 'read' : ''
       let template = `
         <li>
           <div class="toolbar clearfix">
@@ -90,31 +63,31 @@
           </div>
         </li>
       `
-      boardElem.insertAdjacentHTML('beforeend', template);
+      boardElem.insertAdjacentHTML('beforeend', template)
     },
     bindEvents() {
       this.view.querySelector('#messageForm').addEventListener('submit', (e) => {
-        e.preventDefault();
-        let username = e.currentTarget.querySelector('input[name="username"]').value;
-        let message = e.currentTarget.querySelector('input[name="message"]').value;
+        e.preventDefault()
+        let username = e.currentTarget.querySelector('input[name="username"]').value
+        let message = e.currentTarget.querySelector('input[name="message"]').value
         if (username !== '' && message !== '') {
-          let reply = { username, message };
-          reply.time = this.getTime();
-          reply.read = false;
-          this.addMessage(reply, e.currentTarget);
+          let reply = { username, message }
+          reply.time = this.getTime()
+          reply.read = false
+          this.addMessage(reply, e.currentTarget)
         }
       })
 
       this.boardView.addEventListener('click', e => {
-        let node = e.target;
-        let id = node.dataset.id;
+        let node = e.target
+        let id = node.dataset.id
         if (id && node.className.indexOf('read-icon') !== -1) {
-          this.readMessage(id, node);
+          this.readMessage(id, node)
         }
-      });
+      })
     },
     addMessage(reply, formElem) {
-      this.model.add(reply).then((messageObj) => {
+      this.model.save(reply).then((messageObj) => {
         this.addReply({
           time: messageObj.attributes.time,
           message: messageObj.attributes.message,
@@ -126,13 +99,13 @@
       })
     },
     getTime() {
-      let date = new Date();
+      let date = new Date()
       let year = date.getFullYear()
-      let month = date.getMonth() + 1;
-      month = month > 9 ? month : '0' + month;
-      let day = date.getDate() > 9 ? date.getDate() : '0' + date.getDate();
-      let h = date.getHours() > 9 ? date.getHours() : '0' + date.getHours();
-      let m = date.getMinutes() > 9 ? date.getMinutes() : '0' + date.getMinutes();
+      let month = date.getMonth() + 1
+      month = month > 9 ? month : '0' + month
+      let day = date.getDate() > 9 ? date.getDate() : '0' + date.getDate()
+      let h = date.getHours() > 9 ? date.getHours() : '0' + date.getHours()
+      let m = date.getMinutes() > 9 ? date.getMinutes() : '0' + date.getMinutes()
       let time = year + '/' + month + '/' + day
       time += ' ' + h + ':' + m
       return time
@@ -140,25 +113,22 @@
     readMessage(id, node) {
       this.model.update(id, {read: true}).then(
         r => {
-          node.classList.add('read');
+          node.classList.add('read')
           let contentNode = node.previousSibling.nodeType === 1 ? 
             node.previousSibling : 
-            node.previousSibling.previousSibling;
-          contentNode.innerText = '已读';
+            node.previousSibling.previousSibling
+          contentNode.innerText = '已读'
         },
         error => {
-          console.log(error);
+          console.log(error)
         })
-    },
-
-  }
+    }
+  })
 
   try {
-    controller.init(view);
+    controller.init(view, model)
   } catch (error) {
-    console.log(error);
-    console.log('load 11111');
-    window.reloadScriptObj.add('./js/message-board.js');
+    window.reloadScriptObj.add('./js/message-board.js')
   }
-}.call();
+}.call()
 
