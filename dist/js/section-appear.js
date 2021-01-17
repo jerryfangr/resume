@@ -62,6 +62,6 @@
   try {
     controller.init(view);
   } catch (error) {
-    window.reloadScriptObj.add('./dist/js/section-appear.js');
+    window.reloadScriptObj.add('./js/section-appear.js');
   }
 }.call();

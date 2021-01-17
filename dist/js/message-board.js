@@ -125,6 +125,6 @@
   try {
     controller.init(view, model);
   } catch (error) {
-    window.reloadScriptObj.add('./dist/js/message-board.js');
+    window.reloadScriptObj.add('./js/message-board.js');
   }
 }.call();

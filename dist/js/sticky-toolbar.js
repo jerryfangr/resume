@@ -32,6 +32,6 @@
     controller.init(view);
   } catch (error) {
     console.log(error);
-    window.reloadScriptObj.add('./dist/js/sticky-toolbar.js');
+    window.reloadScriptObj.add('./js/sticky-toolbar.js');
   }
 }.call();

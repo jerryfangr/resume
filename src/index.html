@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"
+    />
+    <title>Resume | Jerryfangr</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.css"
+      onerror="reloadLink(this, './lib/swiper.6.4.5.bundle.min.css')"
+      integrity="sha512-m3pAvNriL711NMlhkZHK6K4Tu2/RjtrzyjxZU8mlAbxxoDoURy27KajN1LGTLeEEPvaN12mKAgSCrYEwF9y0jA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/loading.css" />
+    <script src="./js/myload.js"></script>
+  </head>
+  <body>
+    <div id="siteWelcome" class="site-welcome active">
+      <div class="loading"></div>
+    </div>
+    <div id="topNavBar" class="top-nav-bar">
+      <div class="top-nav-bar-inner clearfix">
+        <a class="logo" href="#" title="logo" style="float: left">
+          <span class="rs">RS</span><span class="card">card</span>
+        </a>
+        <nav style="float: right">
+          <ul class="clearfix">
+            <li><a href="#siteAbout">关于</a></li>
+            <li><a href="#siteSkills">技能</a></li>
+            <li class="menu-trigger">
+              <a href="#siteWorks">作品</a>
+              <ul class="sub-menu">
+                <li>作品1</li>
+                <li>作品2</li>
+                <li>作品3</li>
+              </ul>
+            </li>
+            <li><a href="#">教育</a></li>
+            <li><a href="#siteMessage">留言板</a></li>
+            <li><a href="https://jerryfangr.github.io/">博客</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="banner"><div class="mask"></div></div>
+    <main id="siteAbout" data-scroll-anchor>
+      <div class="user-card">
+        <div class="user-info clearfix">
+          <div class="picture">
+            <img src="./img/avatar.jpg" width="299" height="347" alt="头像" />
+          </div>
+          <div class="text">
+            <span class="welcome">HELLO</span>
+            <h1>方涵聪</h1>
+            <p>前端开发工程师</p>
+            <hr />
+            <!-- description -->
+            <dl>
+              <dt>年龄</dt>
+              <dd>22</dd>
+              <dt>所在城市</dt>
+              <dd>上海</dd>
+              <dt>邮箱</dt>
+              <dd>xdxtf@qq.com</dd>
+              <dt>手机</dt>
+              <dd>123456789</dd>
+            </dl>
+          </div>
+        </div>
+        <footer class="media">
+          <a href="#">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-weibo"></use>
+            </svg>
+          </a>
+          <a href="#">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-tuite"></use>
+            </svg>
+          </a>
+          <a href="#">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-github"></use>
+            </svg>
+          </a>
+          <a href="#">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-blog"></use>
+            </svg>
+          </a>
+        </footer>
+      </div>
+      <p class="download-wrapper">
+        <a href="./resume.pdf" class="download-resume" download
+          >下载 PDF 简历</a
+        >
+      </p>
+      <p class="self-introduction">
+        方涵聪，前端工程师<br />
+        技能: 前端开发，Node.js开发
+      </p>
+    </main>
+    <section id="siteSkills" class="skills" data-scroll-anchor>
+      <h2>技能</h2>
+      <ol class="clearfix">
+        <li>
+          <h3>HTML 5 &amp; CSS3</h3>
+          <div class="process-bar">
+            <div class="bar-value" style="width: 70%"></div>
+          </div>
+        </li>
+        <li>
+          <h3>JavaScript</h3>
+          <div class="process-bar">
+            <div class="bar-value" style="width: 80%"></div>
+          </div>
+        </li>
+        <li>
+          <h3>JQuery</h3>
+          <div class="process-bar">
+            <div class="bar-value" style="width: 60%"></div>
+          </div>
+        </li>
+        <li>
+          <h3>Vue.js</h3>
+          <div class="process-bar">
+            <div class="bar-value" style="width: 70%"></div>
+          </div>
+        </li>
+        <li>
+          <h3>React.js</h3>
+          <div class="process-bar">
+            <div class="bar-value" style="width: 30%"></div>
+          </div>
+        </li>
+        <li>
+          <h3>Node.js</h3>
+          <div class="process-bar">
+            <div class="bar-value" style="width: 75%"></div>
+          </div>
+        </li>
+      </ol>
+    </section>
+    <section id="siteWorks" class="portfolio" data-scroll-anchor>
+      <h2>作品集</h2>
+      <nav>
+        <ol class="clearfix">
+          <li id="portfolio1">所有</li>
+          <li id="portfolio2">框架</li>
+          <li id="portfolio3">原生js &amp; css</li>
+        </ol>
+        <div id="portfolioBar" class="bar state-1">
+          <div class="bar-inner"></div>
+        </div>
+      </nav>
+      <div class="swiper-container works">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="./img/portfolio-1.jpg" /></div>
+          <div class="swiper-slide"><img src="./img/portfolio-2.jpg" /></div>
+          <div class="swiper-slide"><img src="./img/portfolio-3.jpg" /></div>
+          <div class="swiper-slide"><img src="./img/portfolio-4.jpg" /></div>
+        </div>
+      <div class="swiper-pagination">
+        <span class="swiper-pagination-bullet">
+          <!-- <img src="./img/portfolio-1.jpg" />，具体在portfolio-switch.js定义 -->
+        </span>
+        <span class="swiper-pagination-bullet"></span>
+        <span class="swiper-pagination-bullet"></span>
+        <span class="swiper-pagination-bullet"></span>
+        <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+      </div>
+      </div>
+    </section>
+    <section id="siteMessage" class="message-board" data-scroll-anchor>
+      <h2>留言板</h2>
+      <ol id="messageList">
+        <li>
+          <div class="toolbar clearfix">
+            <div class="reply-status">已读</div>
+            <div class="read-icon read" title="read it" data-id="">
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-read"></use>
+              </svg>
+            </div>
+          </div>
+          <h3>你好，这里是留言区，有需要可以简单的说明事项并留下你的邮箱。</h3>
+          <div class="footer-info">
+            <div class="reply-time">2020/10/12 17:32</div>
+            <div class="reply-sender">方涵聪 留</div>
+          </div>
+        </li>
+      </ol>
+      <form id="messageForm" action="" method="post">
+        <input type="text" name="username" placeholder="your name" />
+        <input type="text" name="message" placeholder="content" />
+        <button type="submit">submit</button>
+      </form>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </section>
+    <script
+      src="//at.alicdn.com/t/font_2257477_9cenucitcdw.js"
+      onerror="reloadScript(this, './lib/ali-svg.icon.min.js')"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.min.js"
+      onerror="reloadScript(this, './lib/tween.18.6.4.umd.min.js')"
+      integrity="sha512-fJ91rDja9nv9NCUNbvoW69MB1sQlp1d0eJt1NZDJQ1CuwcxReaXUrMCKI23yI9IMnB2hd2fq4PHZZ9UKN/i0mA=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.js"
+      onerror="reloadScript(this, './lib/swiper.6.4.5.bundle.min.js')"
+      integrity="sha512-1LlEYE0qExJ/GUfAJ0k2K2fB5sIvMv/q6ueo3syohvQ3ElWDQVSMUOf39cxaDWHtNu7M6lF6ZC1H6A1m3SvheA=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/leancloud-storage@4.9.0/js/av-min.js"
+      onerror="reloadScript(this, './lib/leancloud-storage.4.9.0.min.js')"
+    ></script>
+    <script src="./js/base/View.js"></script>
+    <script src="./js/base/Model.js"></script>
+    <script src="./js/base/Controller.js"></script>
+    <script src="./js/sticky-toolbar.js"></script>
+    <script src="./js/section-appear.js"></script>
+    <script src="./js/scroll-jump.js"></script>
+    <script src="./js/portfolio-switch.js"></script>
+    <script src="./js/message-board.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

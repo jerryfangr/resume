@@ -57,6 +57,6 @@
   try {
     controller.init(view);
   } catch (error) {
-    window.reloadScriptObj.add('./dist/js/scroll-jump.js');
+    window.reloadScriptObj.add('./js/scroll-jump.js');
   }
 }.call();

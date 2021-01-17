@@ -6,7 +6,8 @@
   "scripts": {
     "babel": "npx babel src/js --out-dir dist/js --presets=@babel/env --watch  >> babel.log",
     "css": "npx node-sass src/css -o dist/css -w >> sass.log",
-    "dev": "./dev.sh"
+    "html": "npx watch 'src/index.html' -c 'cp src/index.html dist/index.html' >> index.log",
+    "dev": "bash dev.sh"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +19,8 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
-    "node-sass": "^5.0.0"
+    "graceful-fs": "^4.2.4",
+    "node-sass": "^5.0.0",
+    "watch-cli": "^0.2.3"
   }
 }
