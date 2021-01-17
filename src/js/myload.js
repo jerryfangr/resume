@@ -18,7 +18,7 @@
     return new Promise((resolve, reject) => {
       sandbyTag.onload = resolve
       sandbyTag.onerror = () => {
-        reject(adress)
+        reject(link)
       }
       insertPosition.appendChild(sandbyTag)
     })

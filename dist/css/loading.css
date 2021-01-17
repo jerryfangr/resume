@@ -1,0 +1,28 @@
+.loading {
+  width: 200px;
+  height: 200px;
+  max-width: 100%;
+  position: relative; }
+
+.loading::before, .loading::after {
+  content: '';
+  border-radius: 50%;
+  background-color: #3d4451;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: enlarge 1.5s linear infinite; }
+
+.loading::after {
+  animation: enlarge 1.5s linear .75s infinite; }
+
+@keyframes enlarge {
+  from {
+    width: 0;
+    height: 0;
+    opacity: 1; }
+  to {
+    width: 100px;
+    height: 100px;
+    opacity: 0; } }

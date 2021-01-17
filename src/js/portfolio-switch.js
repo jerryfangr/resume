@@ -11,7 +11,7 @@
         clickable: true,
         dynamicMainBullets: 1,
         renderBullet: function (index, className) {
-          return '<span class="' + className + '"><image src="./img/portfolio-' + (index + 1) + '.jpg"></span>'
+          return '<span class="' + className + '"><image src="./dist/img/portfolio-' + (index + 1) + '.jpg"></span>'
         },
       },
     },
@@ -40,7 +40,7 @@
   try {
     controller.init(view) 
   } catch (error) {
-    window.reloadScriptObj.add('./js/portfolio-switch.js')
+    window.reloadScriptObj.add('./dist/js/portfolio-switch.js')
   }
 }.call()
 

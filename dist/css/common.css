@@ -1,9 +1,7 @@
 .clearfix::after {
   content: '';
   display: block;
-  clear: both;
-}
+  clear: both; }
 
 .bd-red {
-  border: 1px solid #f00;
-}
+  border: 1px solid #f00; }
