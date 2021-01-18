@@ -6,8 +6,9 @@
   "scripts": {
     "babel": "npx babel src/js --out-dir dist/js --presets=@babel/env --watch  >> babel.log",
     "css": "npx node-sass src/css -o dist/css -w >> sass.log",
-    "html": "npx watch 'src/index.html' -c 'cp src/index.html dist/index.html' >> index.log",
-    "dev": "bash dev.sh"
+    "html": "npx watch \"src/index.html\" -c \"cp src/index.html dist/index.html\" >> index.log",
+    "dev": "bash dev.sh",
+    "start": "npm run dev"
   },
   "keywords": [],
   "author": "",
