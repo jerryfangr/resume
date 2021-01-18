@@ -16,12 +16,12 @@
   "devDependencies": {
     "@babel/cli": "^7.12.10",
     "@babel/core": "^7.12.10",
-    "@babel/preset-env": "^7.12.11"
-  },
-  "dependencies": {
+    "@babel/preset-env": "^7.12.11",
     "@babel/polyfill": "^7.12.1",
     "graceful-fs": "^4.2.4",
     "node-sass": "^5.0.0",
     "watch-cli": "^0.2.3"
+  },
+  "dependencies": {
   }
 }
