@@ -5,9 +5,9 @@ window.Model = function (options) {
 
   options.init = function () {
     AV.init({
-      appId: "8jw7gkIFnu4f0pNyGnYBrp6H-gzGzoHsz",
-      appKey: "xazaedy0vMM8yaHYwEIawsBI",
-      serverURL: "https://8jw7gkif.lc-cn-n1-shared.com"
+      appId: window.resumeConfig.av.appId,
+      appKey: window.resumeConfig.av.appKey,
+      serverURL: window.resumeConfig.av.serverURL
     });
     this.DataObj = AV.Object.extend(this.dataName);
     originInit && originInit.call(this);

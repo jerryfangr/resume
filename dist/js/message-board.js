@@ -6,7 +6,7 @@
   var model = Model({
     dataName: 'Message',
     init: function init() {
-      if (localStorage.user === 'me123456-skachaskjckobhfciawuobcui') {
+      if (localStorage.cdscxsedfegrddfuser === 'me123456-skachaskjckobhfciawuobcui') {
         AV.User.logIn('user', 'test001').then(function (user) {
           console.log('login success', user);
         }, function (error) {
